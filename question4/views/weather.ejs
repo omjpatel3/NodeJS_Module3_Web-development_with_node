@@ -1,0 +1,28 @@
+<div class="container">
+  <header class="header">
+    <h1 class="title">Weather in <%= city %></h1>
+  </header>
+
+  <main class="main-content">
+    <div class="weather-info">
+      <div class="temperature">
+        <h2>Temperature</h2>
+        <p><%= weather.main.temp %> °C</p>
+      </div>
+
+      <div class="condition">
+        <h2>Condition</h2>
+        <p><%= weather.weather[0].description %></p>
+      </div>
+
+      <div class="details">
+        <h3>Details:</h3>
+        <ul>
+          <li>Humidity: <%= weather.main.humidity %>%</li>
+          <li>Pressure: <%= weather.main.pressure %> hPa</li>
+          <li>Wind Speed: <%= weather.wind.speed %> m/s</li>
+        </ul>
+      </div>
+    </div>
+  </main>
+</div>

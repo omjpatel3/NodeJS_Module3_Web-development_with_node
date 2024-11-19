@@ -1,0 +1,21 @@
+
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f4f4f4; }
+        h1 { text-align: center; padding: 20px; }
+        .clock-container { display: flex; justify-content: center; flex-wrap: wrap; margin-top: 20px; }
+        .clock { margin: 20px; padding: 20px; border: 1px solid #ccc; border-radius: 5px; background-color: white; text-align: center; width: 150px; }
+        .city { font-size: 1.2em; font-weight: bold; }
+        .time { font-size: 1.5em; }
+    </style>
+</head>
+<body>
+    <h1>World Clock</h1>
+    <div class="clock-container">
+        <% times.forEach(time => { %>
+            <div class="clock">
+                <div class="city"><%= time.city %></div>
+                <div class="time"><%= time.time %></div>
+            </div>
+        <% }) %>
+    </div>
+
